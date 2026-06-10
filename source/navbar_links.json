@@ -1,14 +1,12 @@
 {
     "About": "/about/index",
+    "Pricing": "/pricing",
     "Download": {
         "Install": "/download",
         "Changelog": "/changelog"
     },
-    "Support": {
-        "Forum": "https://discourse.psychopy.org/",
-        "Consultancy": "/consultancy"
-    },
     "Learn": {
+        "Forum": "https://discourse.psychopy.org/",
         "Documentation": "/documentation",
         "Workshops": "https://workshops.psychopy.org/",
         "Teaching": "/teaching/index",
