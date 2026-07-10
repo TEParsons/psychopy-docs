@@ -1,0 +1,53 @@
+Accessibility in PsychoPy
+-------------------------------
+
+.. note::
+    This page applies specifically to PsychoPy Studio, not PsychoPy Standalone. For users with accessibility requirements we strongly recommend switching to PsychoPy Studio.
+
+    Accessibility is one of many reasons we chose to create PsychoPy Studio, which is a full rebuild of the |PsychoPy| app using modern web-based UI toolkits (Svelte/Electron). PsychoPy Standalone is built in wxPython, which is severely limited in creating bespoke interfaces, so several parts of the app (espcially Builder) had to be manually drawn. Creating elements this way means they don't benefit from tab navigation, tooltips and other accessibility features in the same way as native elements. In PsychoPy Studio, the interface is HTML, which is infinitely flexible and allows us to recreate the same bespoke interface without sacrificing accessibility features.
+
+Accessibility is vital to the mission statement of |PsychoPy|; if it's not accessible, then it'snot "easy enough for teaching" for "free for everyone".
+
+Tooltips
+===============================
+
+High-visibility themes
+===============================
+The high-visibility themes ("High-Vis Light" and "Hi-Vis Dark", for light and dark mode respectively) use high contrast colors to make controls as visible as possible to users with limited vision. In builder view, they look like this:
+
+.. image:: ./screenshots/builder-high-vis-light.png
+    :alt: Screenshot of PsychoPy Studio Builder in with the High-Vis Light theme
+
+.. image:: ./screenshots/builder-high-vis-dark.png
+    :alt: Screenshot of PsychoPy Studio Builder in with the High-Vis Dark theme
+
+To select these, go to File -> Preferences (from Builder, Coder or Runner), select the "Application" tab and then choose them from the dropdown under "Theme":
+
+.. image:: ./screenshots/builder-high-vis-dark.png
+    :alt: Screenshot of PsychoPy Studio's Preferences dialog showing how to select the High-Vis Light theme
+
+Themes are also customisable; the user can create a .css file defining their preferred theme colors, then select it in their preferences. This allows for members of the community to create and distribute theme files to meet more specific accessibility needs.
+
+Keyboard-only navigation
+===============================
+
+Touchscreen-friendly buttons
+===============================
+
+Interruptions
+===============================
+In addition to being annoying, popup dialogs which can't be dismissed can present real challenges for users with attention deficit disorders and anyone relying on a screen reader. 
+
+PsychoPy Studio uses popups minimally. Errors in the value of a Component are displayed as red text below the relevant field, like so:
+
+.. image:: ./screenshots/param-warning.png
+    :alt: Screenshot of an error below a parameter control in a Builder Component
+
+Warnings about the experiment (triggered on compile to Python or JS) are sent to the Alerts panel in Runner (which can be cleared by clicking the eraser button in the top right of the panel):
+
+.. image:: ./screenshots/param-warning.png
+    :alt: Screenshot of an alert in the Alerts panel in Runner
+
+Where we do use popups (such as prompting the user to enter a commit message when syncing to Pavlovia), we always offers a Close/Cancel/X button to dismiss them. The one exception is the dialog box which appears while Python and the |PsychoPy| library are being installed, as skipping this process could break the app.
+
+
