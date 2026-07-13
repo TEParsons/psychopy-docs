@@ -31,6 +31,25 @@ Themes are also customisable; the user can create a .css file defining their pre
 Keyboard-only navigation
 ===============================
 
+All clickable elements in PsychoPy Studio are, or should be (please report any which aren't on our `GitHub issues <https://github.com/psychopy/psychopy-studio>`_!), can receive focus via the keyboard. This means that the app is navigable by keyboard alone. Critically, unlike PsychoPy Standalone, this includes more bespoke views like the Flow and Routines panels.
+
+To navigate using the keyboard, simply press Tab to move focus to the next button on the page (from top left to bottom right), and press Shift+Tab to move focus to the previous button. Pressing Enter will have the same effect as clicking that button, pressing the Menu key will have the same effect as right clicking that button, and pressing Escape will close any open context menus.
+
+Panel skipping
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are a lot of buttons in each view, so to make navigation less tedious, we have included some shortcuts to jump focus to a particular panel. If you hold down the Alt key, panels' labels will change to show which key to press to jump focus to it, like so:
+
+.. image:: ./screenshots/panel-focus-skip.png
+    :alt: Screenshot of PsychoPy Studio Builder with the Alt key held down, showing panel skip shortcuts
+
+So, for example, to skip to the Routines panel, you would press Alt+R. This would select the first item in this panel (in this example, the "trial" tab). Using Alt + a number key will skip you to the matching section of the ribbon (e.g. Alt+0 skips to the File section).
+
+Tab trapping
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Note that any multi-line code controls (such as open files in Coder view or the tabs of a Code Component) can function as "tab traps" - because you can enter them using the Tab key, but once inside pressing Tab or Shift+Tab will indent/dedent the text. To get out of these elements, you can use Ctrl+M (Ctrl+Shift+M on Mac) to toggle ["tab trapping"](https://github.com/Microsoft/monaco-editor/wiki/Monaco-Editor-Accessibility-Guide#tab-trapping), allowing you to once again use Tab or Shift+Tab for navigation.
+
 Touchscreen-friendly buttons
 ===============================
 
@@ -45,7 +64,7 @@ PsychoPy Studio uses popups minimally. Errors in the value of a Component are di
 
 Warnings about the experiment (triggered on compile to Python or JS) are sent to the Alerts panel in Runner (which can be cleared by clicking the eraser button in the top right of the panel):
 
-.. image:: ./screenshots/param-warning.png
+.. image:: ./screenshots/runner-alert.png
     :alt: Screenshot of an alert in the Alerts panel in Runner
 
 Where we do use popups (such as prompting the user to enter a commit message when syncing to Pavlovia), we always offers a Close/Cancel/X button to dismiss them. The one exception is the dialog box which appears while Python and the |PsychoPy| library are being installed, as skipping this process could break the app.
