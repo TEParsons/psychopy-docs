@@ -23,7 +23,7 @@ The high-visibility themes ("High-Vis Light" and "Hi-Vis Dark", for light and da
 
 To select these, go to File -> Preferences (from Builder, Coder or Runner), select the "Application" tab and then choose them from the dropdown under "Theme":
 
-.. image:: ./screenshots/builder-high-vis-dark.png
+.. image:: ./screenshots/preferences-select-theme.png
     :alt: Screenshot of PsychoPy Studio's Preferences dialog showing how to select the High-Vis Light theme
 
 Themes are also customisable; the user can create a .css file defining their preferred theme colors, then select it in their preferences. This allows for members of the community to create and distribute theme files to meet more specific accessibility needs.
