@@ -31,7 +31,7 @@ Themes are also customisable; the user can create a .css file defining their pre
 Keyboard-only navigation
 ===============================
 
-All clickable elements in PsychoPy Studio are, or should be (please report any which aren't on our `GitHub issues <https://github.com/psychopy/psychopy-studio>`_!), can receive focus via the keyboard. This means that the app is navigable by keyboard alone. Critically, unlike PsychoPy Standalone, this includes more bespoke views like the Flow and Routines panels.
+All clickable elements in PsychoPy Studio are (or should be; please report any which aren't on our `GitHub issues <https://github.com/psychopy/psychopy-studio>`_!), able to receive focus via the keyboard. This means that the app is navigable by keyboard alone. Critically, unlike PsychoPy Standalone, this includes more bespoke views like the Flow and Routines panels.
 
 To navigate using the keyboard, simply press Tab to move focus to the next button on the page (from top left to bottom right), and press Shift+Tab to move focus to the previous button. Pressing Enter will have the same effect as clicking that button, pressing the Menu key will have the same effect as right clicking that button, and pressing Escape will close any open context menus.
 
