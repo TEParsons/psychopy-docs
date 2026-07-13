@@ -48,7 +48,7 @@ So, for example, to skip to the Routines panel, you would press Alt+R. This woul
 Tab trapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note that any multi-line code controls (such as open files in Coder view or the tabs of a Code Component) can function as "tab traps" - because you can enter them using the Tab key, but once inside pressing Tab or Shift+Tab will indent/dedent the text. To get out of these elements, you can use Ctrl+M (Ctrl+Shift+M on Mac) to toggle ["tab trapping"](https://github.com/Microsoft/monaco-editor/wiki/Monaco-Editor-Accessibility-Guide#tab-trapping), allowing you to once again use Tab or Shift+Tab for navigation.
+Note that any multi-line code controls (such as open files in Coder view or the tabs of a Code Component) can function as "tab traps" - because you can enter them using the Tab key, but once inside pressing Tab or Shift+Tab will indent/dedent the text. To get out of these elements, you can use Ctrl+M (Ctrl+Shift+M on Mac) to toggle `"tab trapping" <https://github.com/Microsoft/monaco-editor/wiki/Monaco-Editor-Accessibility-Guide#tab-trapping>`_, allowing you to once again use Tab or Shift+Tab for navigation.
 
 Touchscreen-friendly buttons
 ===============================
