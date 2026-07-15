@@ -79,3 +79,7 @@ Warnings about the experiment (triggered on compile to Python or JS) are sent to
 Where we do use popups (such as prompting the user to enter a commit message when syncing to Pavlovia), we always offers a Close/Cancel/X button to dismiss them. The one exception is the dialog box which appears while Python and the |PsychoPy| library are being installed, as skipping this process could break the app.
 
 
+Photosensitivity
+===============================
+
+PsychoPy Studio does not, as part of its user interface, use any rapidly flashing controls which might pose a risk to users with photosensitive epilepsy. However, it is worth noting that **PsychoPy Studio does not prevent you from presenting potentially harmful stimuli in your experiment**, so you should always check that your stimuli aren't potentially harmful.
