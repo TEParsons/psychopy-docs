@@ -11,6 +11,13 @@ Accessibility is vital to the mission statement of |PsychoPy|; if it's not acces
 Tooltips
 ===============================
 
+Tooltips are an essential part of modern apps; they allow for both simple labels to be expanded upon in more detail, and for buttons indicated just by an icon to be parsed by screen readers. Any time a button is used in PsychoPy Studio without a text label, hovering over the button with the mouse or focus it with Tab will display a tooltip describing the button:
+
+.. image:: ./screenshots/tooltip-example.png
+    :alt: Screenshot of the File New button with a tooltip in PsychoPy Studio Builder
+
+In some cases, simple labels can similarly be hovered or focused to show a more in-depth description, as with the names of parameters in Components.
+
 High-visibility themes
 ===============================
 The high-visibility themes ("High-Vis Light" and "Hi-Vis Dark", for light and dark mode respectively) use high contrast colors to make controls as visible as possible to users with limited vision. In builder view, they look like this:
@@ -52,6 +59,8 @@ Note that any multi-line code controls (such as open files in Coder view or the 
 
 Touchscreen-friendly buttons
 ===============================
+
+Touchscreen support on laptops and desktop computers is becoming increasingly common, which provides an easier way for users with limited fine motor control to interact with software. Buttons in PsychoPy Studio are all presented with enough padding that they are touchscreen-clickable; we test this using the `Lighthouse <https://developer.chrome.com/docs/lighthouse/overview/>`_ developer tool in Google Chrome, which alerts us when an element on the screen is too small for touchscreen devices.
 
 Interruptions
 ===============================
