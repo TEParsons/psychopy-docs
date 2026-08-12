@@ -48,10 +48,10 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.1.3/StandalonePsychoPy-2026.1.3-win64-3.10.exe
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2027.1.0/StandalonePsychoPy-2027.1.0-win64-3.10.exe
           :color: primary
 
-          PsychoPy Standalone 2026.1.3
+          PsychoPy Standalone 2027.1.0
       
       .. grid-item-card::  PsychoPy Studio (Beta)
 
@@ -59,10 +59,10 @@ Download
         
         The underlying experiment engine is still Python, but Studio provides a smoother, more user-friendly interface and better version independence with useVersion.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.1.3/PsychoPy_Studio_2026.1.3.exe
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2027.1.0/PsychoPy_Studio_2027.1.0.exe
           :color: primary
 
-          PsychoPy Studio 2026.1.3 
+          PsychoPy Studio 2027.1.0 
   
   .. tab-item:: MacOS
     :class-label: mac-tab
@@ -76,10 +76,10 @@ Download
         
         We will continue to release new versions until PsychoPy Studio is stable enough to replace it.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.1.3/StandalonePsychoPy-2026.1.3-macos-3.10.dmg
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2027.1.0/StandalonePsychoPy-2027.1.0-macos-3.10.dmg
           :color: primary
 
-          PsychoPy Standalone 2026.1.3
+          PsychoPy Standalone 2027.1.0
       
       .. grid-item-card::  PsychoPy Studio (Beta)
 
@@ -87,10 +87,10 @@ Download
         
         The underlying experiment engine is still Python, but Studio provides a smoother, more user-friendly interface and better version independence with useVersion.
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.1.3/PsychoPy_Studio_2026.1.3.dmg
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2027.1.0/PsychoPy_Studio_2027.1.0.dmg
           :color: primary
 
-          PsychoPy Studio 2026.1.3
+          PsychoPy Studio 2027.1.0
   
   .. tab-item:: Linux
     :class-label: linux-tab
@@ -136,11 +136,11 @@ Download
 
         Plus, it's much easier to install on Linux!
 
-        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2026.1.3/PsychoPy_Studio_2026.1.3.AppImage
-          :tooltip: PsychoPy_Studio_2026.1.3.AppImage
+        .. button-link:: https://github.com/psychopy/psychopy/releases/download/2027.1.0/PsychoPy_Studio_2027.1.0.AppImage
+          :tooltip: PsychoPy_Studio_2027.1.0.AppImage
           :color: primary
 
-          PsychoPy Studio 2026.1.3
+          PsychoPy Studio 2027.1.0
 
 **For all versions** see the `PsychoPy releases on github <https://github.com/psychopy/psychopy/releases>`_
 
@@ -158,9 +158,10 @@ See below for options if you want to run the Python app but don't want to use th
 
   The version of Python on which PsychoPy runs best has increased with successive versions, so before installing PsychoPy you should check that you have the correct version of Python installed. Below are the versions at which PsychoPy updated to support different Python versions:
 
-  * 2022.1.0: 3.8
-  * 2024.2.0: 3.10
-  * 2026.2.0: 3.11
+  * PsychoPy 2022.1.0 = Python 3.8
+  * PsychoPy 2024.2.0 = Python 3.10
+  * PsychoPy 2026.2.0 = Python 3.11
+  * PsychoPy 2027.1.0 = Python 3.14
 
   Once you know what version you want, you can install Python by whatever method you prefer. Installers are provided `on the Python website <https://www.python.org/downloads/>`_, or you can use a package manager like `UV <https://docs.astral.sh/uv/>`_ to install Python along with the packages.
 
