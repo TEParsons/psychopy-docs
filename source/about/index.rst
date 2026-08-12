@@ -7,6 +7,7 @@ About |PsychoPy|
         :maxdepth: 1
 
         overview
+        psychopystudio
         testimonials
         ../screenshots
         credits

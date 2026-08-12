@@ -45,6 +45,7 @@ extensions = [
   'sphinx_copybutton',
   'myst_parser',
   'redirect',
+  'sphinx_sitemap',
   'sphinxcontrib.inkscapeconverter' # part of sphinxcontrib-svg2pdfconverter
 ]
 
@@ -156,10 +157,10 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "%s v%s" %(project, release)
+html_title = "PsychoPy®"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = "PsychoPy"
+html_short_title = "PsychoPy®"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -174,6 +175,7 @@ html_favicon = '_static/favicon.ico'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_extra_path = ['robots.txt']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -212,7 +214,7 @@ html_show_sourcelink = True
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'PsychoPydoc'
-
+html_baseurl = 'https://psychopy.org/'
 
 # -- Options for LaTeX output --------------------------------------------------
 latex_engine = 'pdflatex'  # xelatex or pdflatex

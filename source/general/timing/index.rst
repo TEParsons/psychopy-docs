@@ -26,7 +26,10 @@ There are certain steps that we strongly advise you to take before running an ex
 * Read `this timing megastudy <https://peerj.com/articles/9414/>`_ by Bridges et al (2020) which compares several pieces of behavioural software in terms of their temporal precision. You can find a summary of the results here: :ref:`timing2020`
 * Check that your stimulus presentation monitor is not dropping frames. You can do this by running the timeByFrames.py demo. Find this demo in the `Coder` window > demos > timing. The timeByFrames demo examines the precision of your frame flips, and shows the results in a plot similar to the one below:
 
+
 .. figure:: /images/timeByFrameRes.png
+   :alt: "A figure showing two performance graphs that analyse frame timing data. The first graph is a caterpillar plot. The vertical axis shows time in milliseconds and ranges from 16.45 to 16.85. The horizontal axis shows the sequence of frames and goes from 0 to 500. The caterpillar line shows fluctuations in frame time around a central value of approximately 16.65ms. The second graph is a histogram. The vertical axis shows a count of frames and ranges from 0 to 140. The horizontal axis is shows a range of millisecond values. The histogram bars show a high concentration of frames occurring between 16.6ms and 16.7ms, forming a narrow peak that indicates a consistent frame rate."
+
 
     The results here are for a 60Hz monitor, and you can see that there are no dropped frames from the left hand side of the screen, and also the timing of each frame is 16.7ms (shown on the right-hand side of the screen) which is what we would expect from a 60Hz monitor (1000ms/60 = 16.66ms).
 

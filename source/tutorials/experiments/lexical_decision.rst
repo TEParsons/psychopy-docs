@@ -58,6 +58,7 @@ Including a random Inter-Stimulus-Interval (ISI)
 To add a random ISI to our trials, we can add a routine before our word presentation and add a simple text component. Type '+' in the text field. Now, in the *duration* field type :code:`$random()`. This will produce a random number between 0 and 1, so if we want a random ISI between 0.5 and 1 seconds we can simple add this to 0.5 i.e. :code:`0.5 +random()`. Your text component should look like this. 
 
 .. image:: ./lexical_decision_isi.png
+   :alt: " A psychopy routine  showing a fixation cross, a letter and key response"
    :width: 100 %
 
 

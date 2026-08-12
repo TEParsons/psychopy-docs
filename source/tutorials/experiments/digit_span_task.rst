@@ -67,6 +67,7 @@ In this experiment, we are going to allow participants to type responses. Add a 
 Your entire experiment should now look like this:
 
 .. image:: ./digit_span_full_flow.png
+   :alt: "Psychopy routine with a textbox object called 'recall'"
    :width: 100 %
 
 

@@ -22,7 +22,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Topic :: Scientific/Engineering",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-    ]
+]
     
 dependencies = [
     "psychopy", # to inspect the API
@@ -34,6 +34,7 @@ dependencies = [
     "myst-parser",
     "sphinxcontrib.svg2pdfconverter",  # requires inkscape
     "psychopy-sphinx-theme",
+    "sphinx-sitemap",
 ]
 
 [project.optional-dependencies]  # This is optional dependencies
@@ -100,3 +101,11 @@ universal = 1
 
 [tool.psychopy-docs]
 src = ["psychopy-docs"]
+
+[tool.setuptools]
+packages = [
+    "psychopy_docs"
+]
+
+[tool.setuptools.package-dir]
+psychopy_docs = "utils"

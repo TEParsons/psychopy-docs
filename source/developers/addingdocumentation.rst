@@ -4,7 +4,7 @@ Making edits to PsychoPy's documentation
 =========================================
 
 First you'll need to have your own "fork" of |PsychoPy| - this is a copy of the code which is yours 
-to edit, without affecting the main code. :ref:`Click here for a how-to for forking |PsychoPy| <forkPsychoPy>`
+to edit, without affecting the main code. :ref:`Click here for a how-to for forking PsychoPy <forkPsychoPy>`
 
 If you only want to change a single file:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

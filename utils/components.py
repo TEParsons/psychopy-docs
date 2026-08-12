@@ -79,14 +79,15 @@ def createFromTemplate(cls):
     categs = OrderedDict()
     for ref, param in comp.params.items():
         # make sure categ exists
-        if param.categ not in params:
-            params[param.categ] = []
-            # give categ a description if available
-            categs[param.categ] = ""
-            for srcFile in (__folder__ / "categHints").glob(param.categ + ".rst"):
-                categs[param.categ] = srcFile.read_text(encoding="utf-8")
-        # sort by category
-        params[param.categ].append(param)
+        if param.categ:
+            if param.categ not in params:
+                params[param.categ] = []
+                # give categ a description if available
+                categs[param.categ] = ""
+                for srcFile in (__folder__ / "categHints").glob(param.categ + ".rst"):
+                    categs[param.categ] = srcFile.read_text(encoding="utf-8")
+            # sort by category
+            params[param.categ].append(param)
         # store ref
         param.ref = ref
         # make sure allowedLabels/Vals is a list of strings

@@ -237,9 +237,9 @@ If you would like to purchase a package for support from our team for your depar
                 </div>
             </td>
             <td>Free</td>
-            <td>£1800</td>
             <td>£2000</td>
-            <td>£5000</td>
+            <td>£2200</td>
+            <td>£5200</td>
         </tr>
         </table>
         <br>

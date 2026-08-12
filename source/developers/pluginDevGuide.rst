@@ -101,6 +101,7 @@ Now that your GitHub repo is all set up, you need to setup PyPI to look for your
 Scroll down to the "Pending publishers" section and choose "GitHub" from the tabs on the control there. It should look like this:
 
 .. image:: pypi-setup-plugin.png
+   :alt: "GitHub page to describe the plugin"
 
 but with the fields flanked by `<>` replaced by the relevant information for your plugin. Once you click "Add", you should be good to go!
 

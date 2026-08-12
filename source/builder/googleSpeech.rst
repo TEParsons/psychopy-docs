@@ -23,6 +23,7 @@ Steps
 - Then click on Credentials and create Service Account credentials. 
 
 .. figure:: /images/google_speech_service_acc.png
+	:alt: "Screenshot of google cloud platform credential settings. There is a red arrow pointing to the option Service Account"
 	
 	Add credentials to your Google cloud project and select "Service Account".
 

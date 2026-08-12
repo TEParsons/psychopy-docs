@@ -39,6 +39,7 @@ Start |PsychoPy|, and be sure to be in the Builder view.
 * Click on a Text component and a Text Properties dialog will pop up.
 
   .. image:: /images/textComponentApril24.png
+    :alt: The dialog box of the Text Component from 2024
     :width: 80%
     :align: center
 
@@ -48,10 +49,12 @@ Start |PsychoPy|, and be sure to be in the Builder view.
 * Back in the main Builder, type `Ctrl-R` (Windows, Linux) or `Cmd-R` (Mac), or use the mouse to click the `Run` icon.
 
 .. image:: /images/run32.png
+  :alt: A green circle with a white triangle indicating a play/run button in psychopy
 
 Assuming you typed in "Hello world!", your screen should have looked like this (briefly):
 
 .. image:: /images/helloworld.png
+  :alt: A gray screen with white text that reads Hello World
   :width: 80%
   :align: center
 
@@ -87,6 +90,7 @@ To get a better feel for what was happening "behind the scenes" in the Builder p
 * Instead of running the program, explicitly convert it into python: Type `F5`, or click the `Compile` icon:
 
 .. image:: /images/compile_py.png
+  :alt: The compile button in PsychoPy builder, indicating a blue and yellow snake python icon. 
 
 The view will automatically switch to the Coder, and display the python code. If you then save and run this code, it would look the same as running it directly from the Builder.
 

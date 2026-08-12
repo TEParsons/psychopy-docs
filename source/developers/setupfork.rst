@@ -1,4 +1,4 @@
-.. _forkPsychoPy
+.. _forkPsychoPy:
 
 Create a fork of |PsychoPy|
 ==================================================

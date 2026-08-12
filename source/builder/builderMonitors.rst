@@ -12,3 +12,4 @@ Having set up your monitor settings you should then tell |PsychoPy| which of you
 .. only:: html
 
     .. image:: /images/monitorcenter.gif
+    :alt: "Animated gif showing how to set up your monitor with PsychoPy"

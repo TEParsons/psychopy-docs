@@ -13,6 +13,7 @@ Step one: Find out the address of your serial port
 You can quickly find out the address of the serial port that your Arduino is connected to by opening the Arduino IDE and clicking on `Tools` at the top of the window, then down to `Port`. Here, the port that your Arduino is connected to will show the model of your Arduino next to it.
 
 .. figure:: /images/arduinoPort.png
+   :alt: "An screenshot of a window with the following option selected Tools>Port:>Com4(Arduino UNO) "
     :scale: 20%
 
 

@@ -1,6 +1,5 @@
 :orphan:
 :header_template: homepage
-:title: Home
 
 
 .. grid:: 1 1 1 1
@@ -41,7 +40,7 @@
 
         Lots of helpful tutorials on youtube! Click here to see
 
-Home
+Build and run experiments for free
 =========================================
 
 What users say
@@ -49,25 +48,40 @@ What users say
 
 .. card-carousel:: 2
 
-    .. card:: **Davide Massida** via twitter
+    .. card:: 
 
         "PsychoPy is one of those things that improve the life of an experimental psychologist. Really. #python #neuroscience"
 
-    .. card:: **Harriet Allen** Professor, University of Nottingham
+        +++
+        **Davide Massida** via twitter
+
+    .. card:: 
 
         "What made me switch was the combination of Builder and Coder options. Students are not scared of the Builder, but I can still write code when needed (and even hide it in student experiments)."
 
-    .. card:: **Nate Vack** Research Programmer, UW-Madison
+        +++
+        **Harriet Allen** Professor, University of Nottingham
+
+    .. card:: 
 
         "It's wonderful to have a product that makes stimulus presentation easy (and is free!)..."
 
-    .. card:: **Fenja Ziegler** Senior Lecturer, University of Lincoln
+        +++
+        **Nate Vack** Research Programmer, UW-Madison
+
+    .. card:: 
 
         "...easy to customise with a bit of scripting, a helpful user community, can be explained to a student in an hour or so..."
 
-    .. card:: **Micah Allen** Post-doc, UCL
+        +++
+        **Fenja Ziegler** Senior Lecturer, University of Lincoln
+
+    .. card:: 
 
         "I love psychopy! I used it for one previous fMRI experiment and found the language extremely easy to use..."
+
+        +++
+        **Micah Allen** Post-doc, UCL
 
 How is PsychoPy Free?
 =========================================

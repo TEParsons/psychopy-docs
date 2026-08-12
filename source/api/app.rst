@@ -11,7 +11,7 @@ intended for unit testing the GUI and for developers wishing to extend it.
 .. currentmodule:: psychopy.app
 
 Overview
-========
+--------
 
 .. autosummary::
     startApp
@@ -21,7 +21,7 @@ Overview
     getAppFrame
 
 Details
-=======
+-------
 
 .. autofunction:: startApp
 .. autofunction:: quitApp

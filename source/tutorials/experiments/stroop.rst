@@ -21,6 +21,7 @@ OK step 1 of any experiment is to consider "what makes the main stimuli in my tr
 
 .. image:: ./stroop_basic_flow.png
    :width: 100 %
+   :alt: A screenshot of the routine tab in builder showing the components used to make a Stroop task. From top to bottom the components read as "fixation" (A textbox component), "word" (another textbox component) and "key_resp" (a keyboard component).
 
 
 Setting up our conditions file

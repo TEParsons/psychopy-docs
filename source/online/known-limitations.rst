@@ -85,6 +85,7 @@ files that are not available online. This can happen if you have files (images, 
 
 
 .. figure:: /images/addResources.png
+    :alt: "Screenshot of the Psychopy Builder"
     :name: filterComponents
     :align: center
     :figclass: align-center

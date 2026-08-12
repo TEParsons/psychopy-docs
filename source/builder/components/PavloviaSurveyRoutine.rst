@@ -23,6 +23,7 @@ The Pavlovia Survey Routine is a "Standalone Routine", which means rather than a
 
 .. image:: /images/PavloviaSurveyComponent.png
     :width: 60%
+    :alt: "Image showing snapshot of Pavlovia Survey Routine window"
 
 To specify a survey you can either use "Survey ID" or "Survey Model File".
 

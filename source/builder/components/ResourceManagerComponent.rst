@@ -17,6 +17,7 @@ Most experiments need "resources" in order to run. Be it images, sounds, spreads
 
     .. image:: /images/load_gif.gif
         :width: 60%
+        :alt: "Animation showing a progress bar loading an experiment"
 
 However, sometimes this loading can take a pretty long time. This happens either because you have a very large number of resources or because individual files are large (e.g. long movies) . In cases like this, it may be preferred to load these within your experiment, for example whilst your participants are reading through the instructions, in an inter-trial interval or during a break between blocks. This is where the *Resource Manager* component and/or the :ref:`staticcomponent` come in.
 

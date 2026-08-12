@@ -65,6 +65,7 @@ For a simple step-by-step guide to correcting typos, or adding an extra paragrap
 
    addingdocumentation.rst
    testsuitecontributing
+   setupfork
    localization
    menuitem
    buildercomponent

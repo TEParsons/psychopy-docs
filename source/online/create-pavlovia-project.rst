@@ -43,6 +43,7 @@ Create a new Pavlovia project
 6. You should now be able to find your experiment when you log into Pavlovia.org, under **Dashboard → Experiments**.
 
 .. figure:: /images/newProjectUpload.png
+    :alt: “New Project” dialog in PsychoPy Builder for uploading a Pavlovia project, with fields for the project name and the local root path of the experiment files.
     :name: newProjectUpload
     :align: center
     :figclass: align-center
@@ -56,6 +57,7 @@ Interacting with |Pavlovia| from the Builder App
 When running your study online, the relevant controls are in the Browser and Pavlovia sections of the ribbon:
 
 .. figure:: /images/pavlovia_icons_2025.png
+    :alt: PsychoPy Builder showing the “Browser” and “Pavlovia” tabs. The Browser section includes icons for compiling to JavaScript, running an online pilot, and syncing to Pavlovia. The Pavlovia tab displays the user’s username and the current project path.
     :name: pavlovia_icons_2025
     :align: center
     :figclass: align-center
@@ -85,6 +87,7 @@ Every time you make a change locally, click **Sync** to update the online versio
 To view the version history of your experiment, log into Pavlovia.org, go to your experiment page and click on the **"View Code"** button. Here you can select **"Repository" → "Commits"** to see a list of all changes made to your experiment, and download previous versions if you wish. To reinstate a previous version, you will need to download the files, replace those in your existing local folder (keeping the same names) and re-upload them to your local experiment folder.
 
 .. figure:: /images/navigateVersionHistory.png
+    :alt: GitLab interface showing navigation to “Repository” to “Commits,” with a commit list where a file-open icon next to each entry allows viewing the Pavlovia project at that specific revision.
     :name: navigateVersionHistory
     :align: center
     :figclass: align-center

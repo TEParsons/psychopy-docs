@@ -57,6 +57,7 @@ Feeding trial info into PsychoPy
 once we have our conditions file set up and **saved in the same location as our experiment** we need to give this info to our experiment. Add a loop around your trial routine and give the path to your conditions file in the Conditions field. We want to make sure our letters are presented in a preset order, so make sure to set loop type to **sequential**.
 
 .. image:: ./n_back_loop_sequential.png
+   :alt: "A PsychoPy Routine showing a fixation cross, a letter and a key response"
    :width: 100 %
 
 Finally, because our letter is changing trial-by-trial add :code:`$thisLetter` to the text field of your letter component and make sure to **set every repeat**
@@ -67,6 +68,7 @@ Collecting responses
 There are a few tweaks we need to make to our keyboard component to make sure things are just right here. First, by default a keyboard response will force the end of the current routine. That means that if any stimuli were going to be presented later in the routine they would not be presented, in our case it would alter the inter-stimulus-interval by shortening this trial. So, make sure to uncheck the `Force end of Routine` box. 
 
 .. image:: ./n_back_force_end_none.png
+   :alt: "A PsychoPy sequential loop"
    :width: 100 %
 
 The final thing we might want to do is make sure that we store whether a keypress was correct or not. We can do this by adding a column to our conditions file to indicate what the correct response would be on that trial:

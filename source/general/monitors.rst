@@ -4,6 +4,7 @@ Monitor Center
 ====================================
 .. image:: /images/monitor_center.png
   :width: 5%
+  :alt: "Monitor center icon"
 
 |PsychoPy| provides a simple and intuitive way for you to calibrate your monitor and provide other information about it and then import that information into your experiment.
 

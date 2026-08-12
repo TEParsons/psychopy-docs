@@ -28,6 +28,7 @@ Once your experiment is ready for participants:
 2. Under **Project Status**, select **Running**. This makes the experiment accessible to participants who you share the link with.
 
 .. figure:: /images/runningModePavlovia.png
+    :alt: "Screenshot of a Pavlovia experiment dashboard."
     :name: runningModePavlovia
     :align: center
     :figclass: align-center

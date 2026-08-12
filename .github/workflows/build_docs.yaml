@@ -12,7 +12,7 @@ on:
       pp_branch:
         description: 'PsychoPy branch to build docs from'
         required: true
-        default: 'dev'
+        default: 'release'
         type: choice
         options:
           - dev
@@ -89,22 +89,33 @@ jobs:
     - name: "HTML: Sphinx build html"
       run: |
         sphinx-build -b html source build/html
-
     - name: "PDF: Sphinx build latex"
       run: |
         sphinx-build -b latex source build/latex
-    - name: "PDF: Cache Tectonic files"
-      uses: actions/cache@v5
-      with:
-        path: ~/.cache/Tectonic
-        key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
-        restore-keys: |
-          ${{ runner.os }}-tectonic-
+    # - name: "PDF: Cache Tectonic files"
+    #   uses: actions/cache@v5
+    #   with:
+    #     path: ~/.cache/Tectonic
+    #     key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-tectonic-
     - name: "PDF: Set up Tectonic"
       uses: wtfjoke/setup-tectonic@v4
     - name: "PDF: Build PDF with Tectonic"
       run: |
-        tectonic build/latex/PsychoPyManual.tex --outdir build/html
+        # try building with tectonic or fetch from psychopy.org if that fails (e.g. due to missing latex packages)
+        if ! tectonic build/latex/PsychoPyManual.tex --outdir build/html; then
+          echo "Tectonic build failed, fetching pre-built PDF from psychopy.org"
+          curl -L -o build/html/PsychoPyManual.pdf https://www.psychopy.org/PsychoPyManual.pdf
+        fi
+    - name: fetch plugins.json
+      run: |
+        curl -LO https://github.com/psychopy/plugins/raw/refs/heads/main/plugins.json
+        mv plugins.json build/html
+    - name: add .nojekyll to docs folder so Actions doesn't rebuild with jekyll
+      working-directory: build/html
+      run: |
+        touch .nojekyll
     - name: "DEBUG: Upload docs as artifact"
       uses: actions/upload-artifact@v6
       with:
@@ -112,12 +123,13 @@ jobs:
         path: build/html
     - name: "DEBUG: Upload PsychoPyManual.tex as artifact"
       uses: actions/upload-artifact@v6
+      if: always() # upload even if build fails, to allow debugging of build issues
       with:
         name: PsychoPyManual.tex
         path: build/latex/PsychoPyManual.tex
     # upload as artefact for deployment job
     - name: Upload static files as artifact
-      if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+      if: github.ref_name == 'release' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
       id: deployment
       uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
       with:
@@ -125,7 +137,7 @@ jobs:
 
   # Deployment job converts the artifact into a GitHub Pages deployment
   deploy:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    if: github.ref_name == 'release' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     permissions:
       contents: write
       pages: write       # Added for GitHub Pages deployment
