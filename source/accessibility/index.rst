@@ -6,12 +6,12 @@ Accessibility in PsychoPy
 
     Accessibility is one of many reasons we chose to create PsychoPy Studio, which is a full rebuild of the |PsychoPy| app using modern web-based UI toolkits (Svelte/Electron). PsychoPy Standalone is built in wxPython, which is severely limited in creating bespoke interfaces, so several parts of the app (espcially Builder) had to be manually drawn. Creating elements this way means they don't benefit from tab navigation, tooltips and other accessibility features in the same way as native elements. In PsychoPy Studio, the interface is HTML, which is infinitely flexible and allows us to recreate the same bespoke interface without sacrificing accessibility features.
 
-Accessibility is vital to the mission statement of |PsychoPy|; if it's not accessible, then it'snot "easy enough for teaching" for "free for everyone".
+Accessibility is vital to the mission statement of |PsychoPy|; if it's not accessible, then it's not "easy enough for teaching" or "free for everyone".
 
 Tooltips
 ===============================
 
-Tooltips are an essential part of modern apps; they allow for both simple labels to be expanded upon in more detail, and for buttons indicated just by an icon to be parsed by screen readers. Any time a button is used in PsychoPy Studio without a text label, hovering over the button with the mouse or focus it with Tab will display a tooltip describing the button:
+Tooltips are an essential part of modern apps; they allow for both simple labels to be expanded upon in more detail, and for buttons indicated just by an icon to be parsed by screen readers. Any time a button is used in PsychoPy Studio without a text label, hovering over the button with the mouse or focusing it with Tab will display a tooltip describing the button:
 
 .. image:: ./screenshots/tooltip-example.png
     :alt: Screenshot of the File New button with a tooltip in PsychoPy Studio Builder
@@ -20,6 +20,7 @@ In some cases, simple labels can similarly be hovered or focused to show a more 
 
 High-visibility themes
 ===============================
+
 The high-visibility themes ("High-Vis Light" and "Hi-Vis Dark", for light and dark mode respectively) use high contrast colors to make controls as visible as possible to users with limited vision. In builder view, they look like this:
 
 .. image:: ./screenshots/builder-high-vis-light.png
@@ -64,6 +65,7 @@ Touchscreen support on laptops and desktop computers is becoming increasingly co
 
 Interruptions
 ===============================
+
 In addition to being annoying, popup dialogs which can't be dismissed can present real challenges for users with attention deficit disorders and anyone relying on a screen reader. 
 
 PsychoPy Studio uses popups minimally. Errors in the value of a Component are displayed as red text below the relevant field, like so:
