@@ -110,8 +110,10 @@ version = '.'.join(release.split('.')[0:2])  # the major/mid version e.g 2022.1
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_trees = []
-
+# exclude_patterns=['api/**/*']  # doesn't work! :shrug:
+# can include on commandline like -D "exclude_patterns=['api', 'api/*', 'api/*/*', 'api/*/*/*']" (BUT no spaces around the = sign)
+# exclude_patterns=['api', 'api/*', 'api/*/*', 'api/*/*/*']   
+                  
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
 

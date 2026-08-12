@@ -151,114 +151,41 @@ Download
 Manual installations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-See below for options if you want to run the Python app but don't want to use the Standalone releases.
+See below for options if you want to run the Python app but don't want to use the Standalone releases. Before any of these options, you should setup a Python environment of the correct version for the version of PsychoPy you want to install.
+
+.. _setup_python:
+.. dropdown:: Setup Python
+
+  The version of Python on which PsychoPy runs best has increased with successive versions, so before installing PsychoPy you should check that you have the correct version of Python installed. Below are the versions at which PsychoPy updated to support different Python versions:
+
+  * 2022.1.0: 3.8
+  * 2024.2.0: 3.10
+  * 2026.2.0: 3.11
+
+  Once you know what version you want, you can install Python by whatever method you prefer. Installers are provided `on the Python website <https://www.python.org/downloads/>`_, or you can use a package manager like `UV <https://docs.astral.sh/uv/>`_ to install Python along with the packages.
 
 .. _pip_install:
-.. dropdown:: pip install
+.. dropdown:: uv/pip install
 
-  Now that most python libraries can be installed using `pip` it's relatively easy
-  to manually install |PsychoPy| and all it's dependencies to your own installation
-  of Python.
+  pip is the package manager recommended by Python, you can read more about it `here <https://packaging.python.org/en/latest/tutorials/installing-packages/>`_. UV is a newer tool which handles packages *and* Python environments in one interface, you can read more about it `here <https://docs.astral.sh/uv/>`_. When you first open PsychoPy Studio and it sets up a Python environment for you, UV is what it uses, so we take great care to make sure UV installs specifically work smoothly! We include these together as UV is intentionally similar to pip, so the process of installing via either manager is extremely similar. 
 
-  The steps are to fetch Python. This method should work on a range of versions of Python
-  but **we strongly recommend you use Python 3.10 or 3.8**. Older Python versions are no longer being tested and
-  may not work correctly. Newer Python versions may not have wheels for all the necessary
-  dependencies even though we believe that PsychoPy's code, itself, is compatible up
-  to at least Python 3.10.
+  Installing in either UV or pip can be done with a single command in the terminal: ::
 
-  You can install |PsychoPy| and its dependencies (more than you'll strictly need, depending on the features you use)
-  by::
-
-    pip install psychopy
-
-  If you prefer *not* to install *all* the dependencies (e.g. because the platform or Python version you're
-  on doesn't have that dependency easily available) then you could do::
-
-    pip install psychopy --no-deps
-
-  and then install them manually. On Windows, if you need a package that isn't available on PyPI you
-  may want to try the `unofficial packages by Christoph Gohlke <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+    # for pip
+    python -m pip install psychopy psychopy-app
+    # for uv
+    uv pip install psychopy psychopy-app
+  
+  This will install both the PsychoPy library (``psychopy``) and the Python app (``psychopy-app``), and all their dependencies. To install just the library (for running experiments as scripts), just remove ``psychopy-app`` from the command. To install without any dependencies (if you prefer to set them up yourself), just add ``--no-deps`` to the end of the command.
 
 .. _brew_install:
 .. dropdown:: brew install
 
   This is a user-contributed option and may or may not work.
 
-  On a MacOS machine, `brew` can be used to install |PsychoPy|::
+  On a MacOS machine, ``brew`` can be used to install |PsychoPy|::
 
     brew install --cask psychopy
-
-.. _linux_install:
-.. dropdown:: Linux
-
-  We are aware that the procedure for installing on Linux is often rather painful.
-  This is not the platform that the core PsychoPy developers currently use so support
-  is less good than on some platforms. Feel free to jump in and help improve it as a
-  contributor! :-)
-
-  There used to be neurodebian and Gentoo packages for |PsychoPy| but these are both
-  badly outdated. We'd recommend you first make sure you have a compatible Python
-  version installed (currently ``>=3.8, <3.11``). If you need an older version, you
-  can on Ubuntu for example do:
-
-  .. code-block:: bash
-
-      sudo add-apt-repository ppa:deadsnakes/ppa
-      sudo apt update
-      sudo apt install python3.10-venv python3.10-dev
-      python3.10 -m venv path/to/new/psychopyenv  # choose a path of interest!
-      source path/to/new/psychopyenv/bin/activate
-
-  Once you have a compatible Python activated, **copy the link to a wxPython wheel** for
-  your platform from:
-
-  https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
-
-  and having downloaded the right wheel you can then install it with something like:
-
-  .. code-block:: bash
-
-    pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.1-cp310-cp310-linux_x86_64.whl
-
-  ``wxPython>=4.0`` doesn't have universal wheels yet which is why you have to
-  find and install the correct wheel for your particular flavor of linux.
-  If a wheel is not yet available for your platform (e.g., a new version of Linux),
-  you will have to build it manually. For example, you can use ``pip download wxPython``,
-  extract the archive, enter the directory, and try ``python setup.py bdist_wheel`` to
-  build a wheel yourself. You will likely need to install some system build dependencies.
-  Once it builds, you can install for example with ``pip install dist/wxPython*.whl``.
-
-  For some reasons wxPython (wx.html2) is using an older version of libwebkitgtk
-  e.g. psychopy will not show up
-  to fix this (of our own risk):
-  sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu bionic main universe'
-  sudo apt install -t bionic libwebkitgtk-1.0-0
-
-  Finally, you can do:
-
-  .. code-block:: bash
-
-      # with --no-deps flag if you want to install dependencies manually
-      pip install psychopy
-
-  **Building Python PsychToolbox bindings:**
-
-  The PsychToolbox bindings for Python provide superior timing for sounds and
-  keyboard responses. Unfortunately we haven't been able to build universal wheels
-  for these yet so you may have to build the pkg yourself. That should not be hard.
-  You need the necessary dev libraries installed first:
-
-  .. code-block:: bash
-
-      sudo apt-get install libusb-1.0-0-dev portaudio19-dev libasound2-dev
-
-  and then you should be able to install using pip and it will build the extensions
-  as needed:
-
-  .. code-block:: bash
-
-      pip install psychtoolbox
-
 
 .. _conda:
 .. dropdown:: Anaconda and Miniconda
@@ -273,27 +200,100 @@ See below for options if you want to run the Python app but don't want to use th
   Alternatively if someone wants to jump in and get things working here again that
   would be appreciated by other users I'm sure.
 
+.. _linux_install:
+.. dropdown:: Linux
+
+  Installing just the PsychoPy library on Linux is the same as installing on Windows or Mac, see instructions for uv/pip above. However, the PsychoPy Python app uses wxPython, which is notorious for poor Linux support, so installing that on Linux is often rather painful. For this reason, we **strongly** recommend using PsychoPy Studio if you're on Linux.
+
+  If you do need the Python app, here are the legacy instructions for installing it on Linux:
+
+    .. card:: Legacy install
+
+      We are aware that the procedure for installing on Linux is often rather painful.
+      This is not the platform that the core PsychoPy developers currently use so support
+      is less good than on some platforms. Feel free to jump in and help improve it as a
+      contributor! :-)
+
+      There used to be neurodebian and Gentoo packages for |PsychoPy| but these are both
+      badly outdated. We'd recommend you first make sure you have a compatible Python
+      version installed (currently ``>=3.8, <3.11``). If you need an older version, you
+      can on Ubuntu for example do:
+
+      .. code-block:: bash
+
+          sudo add-apt-repository ppa:deadsnakes/ppa
+          sudo apt update
+          sudo apt install python3.10-venv python3.10-dev
+          python3.10 -m venv path/to/new/psychopyenv  # choose a path of interest!
+          source path/to/new/psychopyenv/bin/activate
+
+      Once you have a compatible Python activated, **copy the link to a wxPython wheel** for
+      your platform from:
+
+      https://extras.wxpython.org/wxPython4/extras/linux/gtk3/
+
+      and having downloaded the right wheel you can then install it with something like:
+
+      .. code-block:: bash
+
+        pip install https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-22.04/wxPython-4.2.1-cp310-cp310-linux_x86_64.whl
+
+      ``wxPython>=4.0`` doesn't have universal wheels yet which is why you have to
+      find and install the correct wheel for your particular flavor of linux.
+      If a wheel is not yet available for your platform (e.g., a new version of Linux),
+      you will have to build it manually. For example, you can use ``pip download wxPython``,
+      extract the archive, enter the directory, and try ``python setup.py bdist_wheel`` to
+      build a wheel yourself. You will likely need to install some system build dependencies.
+      Once it builds, you can install for example with ``pip install dist/wxPython*.whl``.
+
+      For some reasons wxPython (wx.html2) is using an older version of libwebkitgtk
+      e.g. psychopy will not show up
+      to fix this (of our own risk):
+      sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu bionic main universe'
+      sudo apt install -t bionic libwebkitgtk-1.0-0
+
+      Finally, you can do:
+
+      .. code-block:: bash
+
+          # with --no-deps flag if you want to install dependencies manually
+          pip install psychopy
+
+      **Building Python PsychToolbox bindings:**
+
+      The PsychToolbox bindings for Python provide superior timing for sounds and
+      keyboard responses. Unfortunately we haven't been able to build universal wheels
+      for these yet so you may have to build the pkg yourself. That should not be hard.
+      You need the necessary dev libraries installed first:
+
+      .. code-block:: bash
+
+          sudo apt-get install libusb-1.0-0-dev portaudio19-dev libasound2-dev
+
+      and then you should be able to install using pip and it will build the extensions
+      as needed:
+
+      .. code-block:: bash
+
+          pip install psychtoolbox
+
 .. _developers_install:
 .. dropdown:: Developers install
+
+  First, follow the :ref:`instructions to fork and fetch <usingRepos>` to fetch the latest versions of the ``psychopy`` and ``psychopy-app`` repositories.
+
+  From each directory where you cloned these two projects to, run::
+
+    # for pip
+    python -m pip install -e .
+    # for uv
+    uv pip install -e .
   
-  Ensure you have Python 3.8 and the latest version of pip installed::
+  This will install |PsychoPy| (from the ``psychopy`` directory) and the PsychoPy Python app (from the ``psychopy-app`` directory) in such a way that when you change the code, you won't have to reinstall to see your code changes in effect.
 
-    python --version
-    pip --version
-
-  Next, follow the :ref:`instructions to fork and fetch <usingRepos>` the latest version of the |PsychoPy| repository.
-
-  From the directory where you cloned the latest |PsychoPy| repository (i.e., where setup.py resides), run::
-
-    pip install -e .
-
-  This will install all |PsychoPy| dependencies to your default Python distribution (which should be Python 3.8). Next, you should create a new |PsychoPy| shortcut linking your newly installed dependencies to your current version of |PsychoPy| in the cloned repository. To do this, simply create a new .BAT file containing::
-
-  "C:\PATH_TO_PYTHON3.8\python.exe C:\PATH_TO_CLONED_PSYCHOPY_REPO\psychopy\app\psychopyApp.py"
-
-  Alternatively, you can run the psychopyApp.py from the command line::
-
-    python C:\PATH_TO_CLONED_PSYCHOPY_REPO\psychopy\app\psychopyApp
+  To run the app, you can now call in terminal (or by your preferred means, e.g. a shortcut file or `VS Code launch config <https://code.visualstudio.com/docs/debugtest/debugging-configuration>`_): ::
+  
+    python -m psychopy_app
 
 .. _hardware:
 

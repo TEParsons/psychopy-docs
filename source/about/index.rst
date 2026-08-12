@@ -21,7 +21,18 @@ About |PsychoPy|
         overview
         credits
         contributing
-    
+
+Comparisons with other packages:
+
+.. toctree::
+    :maxdepth: 1
+
+    comparing_PsychoPy_and_EPrime
+    comparing_PsychoPy_and_Gorilla
+    comparing_PsychoPy_and_jsPsych
+    comparing_PsychoPy_and_OpenSesame
+    comparing_PsychoPy_and_Psychtoolbox
+
 .. _citingPsychoPy:
 
 Citing |PsychoPy|
