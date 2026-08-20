@@ -13,7 +13,7 @@
     .. grid-item-card:: :octicon:`info` News
         :link: https://workshops.psychopy.org/
 
-        Join us for our Virtual workshop! April 21st - 24th
+        Join us for our Virtual workshop! October 13th-16th.
 
     .. grid-item-card:: :octicon:`info` News
         :link: https://opensciencetools.org/
