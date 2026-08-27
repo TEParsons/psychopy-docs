@@ -1,3 +1,5 @@
+.. include:: /price_defs.rst
+
 .. _psychopyVersusJsPsych:
 
 Comparing PsychoPy with jsPsych
