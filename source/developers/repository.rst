@@ -49,20 +49,27 @@ Around a major (feature) release the two trunks will generally become synchronis
 PsychoPy commit messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Informative commit messages are really useful when we have to go back through the repository finding the time that a particular change to the code occurred. PsychoPy follows the [Conventional Commits](https://conventionalcommits.org/) spec, so you should precede your message with one of the following:
+Informative commit messages are really useful when we have to go back through the repository finding the time that a particular change to the code occurred. PsychoPy follows the [Conventional Commits](https://conventionalcommits.org/) spec, so you should precede your message with one of the following "tags":
 
-* *fix* : Bug fix
-* *refactor* : Restructuring code
-* *feat* : Add a new feature or improvement
-* *docs*: Any changes to documentation (including comments, demos and function docstrings)
-* *test*: Any changes to the test suite
-* *chore*: Changes to processes, actions, etc. (devops stuff, basically)
+* ``fix`` : Bug fix
+* ``refactor`` : Restructuring code
+* ``feat`` : Add a new feature or improvement
+* ``docs``: Any changes to documentation (including comments, demos and function docstrings)
+* ``test``: Any changes to the test suite
+* ``chore``: Changes to processes, actions, etc. (devops stuff, basically)
+
+You can add the following after the tag (before the ``:``) to give more specific detail:
+
+* ``(reg)`` : Regression scope - indicates that you are fixing/improving something unreleased, e.g. ``fix(reg): Forgot to delete print statement from debugging a new feature``
+* ``!`` : Breaking change - indicates that this change may break users' existing experiments, e.g. ``refactor!: Completely rearrange everything``
+
+You can also indicate a breaking change by adding ``BREAKING CHANGE:`` to the commit footer.
 
 .. note::
-    PsychoPy only recently (2026) moved over to Common Commits, so you may be familiar with our old commit message style. If you are, here is how the old tags correspond to the new ones:
+    PsychoPy only recently (2026) moved over to Conventional Commits, so you may be familiar with our old commit message style. If you are, here is how the old tags correspond to the new ones:
     
     * *BF* -> *fix*
-    * *FF* -> *fix*
+    * *FF* -> *fix(reg)*
     * *RF* -> *refactor*
     * *NF* -> *feat*
     * *ENH* -> *feat*
