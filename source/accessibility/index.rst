@@ -18,10 +18,15 @@ Tooltips are an essential part of modern apps; they allow for both simple labels
 
 In some cases, simple labels can similarly be hovered or focused to show a more in-depth description, as with the names of parameters in Components.
 
+Screen readers
+===============================
+
+PsychoPy Studio is tested by using it with the [NVDA screen reader](https://www.nvaccess.org/) to make sure all the controls declare themselves and their labels correctly. If there's any controls we missed, please do report them on the [GitHub Issues for PsychoPy Studio](https://github.com/psychopy/psychopy-studio/issues).
+
 High-visibility themes
 ===============================
 
-The high-visibility themes ("High-Vis Light" and "Hi-Vis Dark", for light and dark mode respectively) use high contrast colors to make controls as visible as possible to users with limited vision. In builder view, they look like this:
+The high-visibility themes ("High-Vis Light" and "High-Vis Dark", for light and dark mode respectively) use high contrast colors to make controls as visible as possible to users with limited vision. In builder view, they look like this:
 
 .. image:: ./screenshots/builder-high-vis-light.png
     :alt: Screenshot of PsychoPy Studio Builder in with the High-Vis Light theme
@@ -46,12 +51,7 @@ To navigate using the keyboard, simply press Tab to move focus to the next butto
 Panel skipping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are a lot of buttons in each view, so to make navigation less tedious, we have included some shortcuts to jump focus to a particular panel. If you hold down the Alt key, panels' labels will change to show which key to press to jump focus to it, like so:
-
-.. image:: ./screenshots/panel-focus-skip.png
-    :alt: Screenshot of PsychoPy Studio Builder with the Alt key held down, showing panel skip shortcuts
-
-So, for example, to skip to the Routines panel, you would press Alt+R. This would select the first item in this panel (in this example, the "trial" tab). Using Alt + a number key will skip you to the matching section of the ribbon (e.g. Alt+0 skips to the File section).
+There are a lot of buttons in each view, so to make navigation less tedious, we have included a shortcuts to jump focus to the next panel. By default this shortcut is Ctrl+Tab, but you can change it in Preferences -> Key Bindings.
 
 Tab trapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
